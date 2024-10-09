@@ -1,12 +1,11 @@
 @props(['project'])
-<x-ui.card class="col-span-2 ">
+<x-ui.card class="col-span-2 h-min">
     <div class="flex items-start justify-between pb-4">
         <div class="flex flex-col gap-[16px]">
             <div>
                 <span
                     class="bg-[#C0F7B4] text-[#1D8338] rounded-full font-bold text-center uppercase py-[6px] px-[14px] text-[12px] tracking-wide ">
-                    {{--   {{ $project->status->label() }} --}}
-                    {{ $project->status }}
+                      {{ $project->status->label() }}
                 </span>
             </div>
             <h1 class="text-[28px] text-white leading-9">
@@ -20,8 +19,8 @@
             <button
                 class="bg-[#5354FD] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
                     hover:bg-[#1f20a6] transition duration-300 ease-in-out"
-                @click="$refs.modal.showModal(); showModal= true">
-                Enviar uma proposta
+                    @click="$refs.modal.showModal(); showModal= true">
+                Submit proposal
             </button>
             <div class="flex items-center justify-between mt-4 text-[14px]">
                 <div class="text-[#8C8C9A]  leading-6">Closes in:</div>
