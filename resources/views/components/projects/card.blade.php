@@ -5,7 +5,7 @@
             <div>
                 <span
                     class="bg-[#C0F7B4] text-[#1D8338] rounded-full font-bold text-center uppercase py-[6px] px-[14px] text-[12px] tracking-wide ">
-                      {{ $project->status->label() }}
+                    {{ $project->status->label() }}
                 </span>
             </div>
             <h1 class="text-[28px] text-white leading-9">
@@ -16,12 +16,9 @@
             </div>
         </div>
         <div>
-            <button
-                class="bg-[#5354FD] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
-                    hover:bg-[#1f20a6] transition duration-300 ease-in-out"
-                    @click="$refs.modal.showModal(); showModal= true">
-                Submit proposal
-            </button>
+
+            <livewire:proposals.create :$project/>
+
             <div class="flex items-center justify-between mt-4 text-[14px]">
                 <div class="text-[#8C8C9A]  leading-6">Closes in:</div>
                 <div class="font-bold flex items-center space-x-1">

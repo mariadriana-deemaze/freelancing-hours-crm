@@ -9,4 +9,15 @@ class Proposal extends Model
 {
     /** @use HasFactory<\Database\Factories\ProposalFactory> */
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'hours',
+        'email',
+    ];
+
 }
